@@ -59,5 +59,14 @@ df['industry'] = df['industry'].str.replace(',','.').astype(float)
 df['service'] = df['service'].str.replace(',','.').astype(float)
 ```
 
+```python
+#adds column of net population change
+df['net_pop_change'] = df.birthrate - df.deathrate
+```
+
 ### References
-https://stackoverflow.com/questions/38101009/changing-multiple-column-names-but-not-all-of-them-panda-python
+- https://www.kaggle.com/fernandol/countries-of-the-world
+- https://en.wikipedia.org/wiki/Birth_rate
+- https://stackoverflow.com/questions/38101009/changing-multiple-column-names-but-not-all-of-them-panda-python
+- https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.groupby.html
+- https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.sort_values.html
